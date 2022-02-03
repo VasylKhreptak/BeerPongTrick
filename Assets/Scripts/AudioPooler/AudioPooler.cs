@@ -48,6 +48,8 @@ public class AudioPooler : MonoBehaviour
 
     private Transform _listenerTransform;
 
+    #region MonoBehaviour
+
     private void Awake()
     {
         if (_dontDestroyOnLoad)
@@ -72,6 +74,18 @@ public class AudioPooler : MonoBehaviour
 
         FillPool();
     }
+    
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    #endregion
 
     private void FillTrackInfo()
     {
@@ -107,16 +121,6 @@ public class AudioPooler : MonoBehaviour
 
             _pool.Add(poolItem);
         }
-    }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

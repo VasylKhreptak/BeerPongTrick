@@ -16,12 +16,14 @@ public class ObjectPooler : MonoBehaviour
 
     [Header("Preferences")]
     [SerializeField] private bool _dontDestroyOnLoad;
-    
+
     [Header("Pool")]
     private Dictionary<Pools, Queue<GameObject>> _poolDictionary;
     [SerializeField] private List<Pool> _pools;
 
     public static ObjectPooler Instance;
+
+    #region MonoBehaviour
 
     private void Awake()
     {
@@ -53,6 +55,8 @@ public class ObjectPooler : MonoBehaviour
     {
         SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
+
+    #endregion
 
     private void CreatePoolFolders()
     {

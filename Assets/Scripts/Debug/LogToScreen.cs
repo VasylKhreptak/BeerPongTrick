@@ -16,14 +16,9 @@ public class LogToScreen : MonoBehaviour
 
     #region MonoBehaviour
 
-    private IEnumerator Start()
+    private void OnValidate()
     {
-        while (true)
-        {
-            Debug.Log(123);
-
-            yield return new WaitForSecondsRealtime(1f);
-        }
+        _tmp = GetComponent<TMP_Text>();
     }
 
     private void OnEnable()

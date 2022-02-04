@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public class ObjectPooler : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class ObjectPooler : MonoBehaviour
     private Dictionary<Pools, Queue<GameObject>> _poolDictionary;
     [SerializeField] private List<Pool> _pools;
 
-    public static ObjectPooler Instance;
+    private ObjectPooler Instance;
+
+    [Inject] private DiContainer _diContainer;
 
     #region MonoBehaviour
 
@@ -77,12 +80,12 @@ public class ObjectPooler : MonoBehaviour
 
             for (var j = 0; j < _pools[i]._size; j++)
             {
-                var gameObject = Instantiate(_pools[i]._prefab);
-                gameObject.SetActive(false);
+                var obj = _diContainer.InstantiatePrefab(_pools[i]._prefab);
+                obj.SetActive(false);
 
-                gameObject.transform.SetParent(_pools[i].folder.transform);
+                obj.transform.SetParent(_pools[i].folder.transform);
 
-                objectPool.Enqueue(gameObject);
+                objectPool.Enqueue(obj);
             }
 
             _poolDictionary.Add(_pools[i]._poolType, objectPool);

@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Graphics/Room/scenes/the last revelation.unity
+    guid: fffc368ce7c545240a157d1fa3ce0e97
+  - enabled: 1
+    path: Assets/Graphics/Brick Project Studio/Apartment Kit/Scenes/Scene_01.unity
+    guid: 5192fb7ee619ba3438fa03702e516cd4
+  - enabled: 1
+    path: Assets/Graphics/FurnishedCabin/Scenes/Demo.unity
+    guid: 0bce5907d797a4cd8b0660dc119867e8
   m_configObjects: {}

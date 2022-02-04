@@ -4,6 +4,7 @@ using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public class AudioPooler : MonoBehaviour
 {
@@ -25,14 +26,9 @@ public class AudioPooler : MonoBehaviour
         public IEnumerator coroutine;
         public uint ID;
     }
-
-    public static AudioPooler Instance;
-
+    
     [Header("References")]
     [SerializeField] private AudioMixer _audioMixer;
-
-    [Header("Preferences")]
-    [SerializeField] private bool _dontDestroyOnLoad = true;
 
     [Header("Pool preferences")]
     [SerializeField] private int _maxSounds = 30;
@@ -46,29 +42,11 @@ public class AudioPooler : MonoBehaviour
     private uint _idGiver;
 
     private Transform _listenerTransform;
-
+    
     #region MonoBehaviour
 
     private void Awake()
     {
-        if (_dontDestroyOnLoad)
-        {
-            transform.parent = null;
-
-            DontDestroyOnLoad(gameObject);
-
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-
-                return;
-            }
-        }
-
         FillTrackInfo();
 
         FillPool();

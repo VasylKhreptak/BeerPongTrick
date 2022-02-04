@@ -15,9 +15,6 @@ public class ObjectPooler : MonoBehaviour
         [HideInInspector] public GameObject folder;
     }
 
-    [Header("Preferences")]
-    [SerializeField] private bool _dontDestroyOnLoad;
-
     [Header("Pool")]
     private Dictionary<Pools, Queue<GameObject>> _poolDictionary;
     [SerializeField] private List<Pool> _pools;
@@ -31,23 +28,6 @@ public class ObjectPooler : MonoBehaviour
     private void Awake()
     {
         SceneManager.sceneUnloaded += OnSceneUnloaded;
-
-        if (_dontDestroyOnLoad)
-        {
-            transform.parent = null;
-
-            DontDestroyOnLoad(gameObject);
-
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-                return;
-            }
-        }
 
         CreatePoolFolders();
 

@@ -4,10 +4,10 @@ using Zenject;
 public class ObjectPoolerInstaller : MonoInstaller
 {
     [Header("References")]
-    [SerializeField] private ObjectPooler _objectPooler;
+    [SerializeField] private GameObject _objectPoolerPrefab;
 
     public override void InstallBindings()
     {
-        Container.BindInstance(_objectPooler).AsSingle();
+        Container.BindInstance(_objectPoolerPrefab.GetComponent<ObjectPooler>()).AsSingle();
     }
 }

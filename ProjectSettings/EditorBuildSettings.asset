@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom.unity
-    guid: fffc368ce7c545240a157d1fa3ce0e97
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom1.unity
+    guid: b55500133e7823047b80105dd7cbc029
   - enabled: 1
-    path: Assets/Scenes/Levels/Apartment/Apartment.unity
-    guid: 5192fb7ee619ba3438fa03702e516cd4
-  - enabled: 1
-    path: Assets/Scenes/Levels/Cabin/Cabin.unity
-    guid: 0bce5907d797a4cd8b0660dc119867e8
+    path: Assets/Scenes/Levels/Cabin/Cabin1.unity
+    guid: 90adcec604123394e894ebf27a12f228
   m_configObjects: {}

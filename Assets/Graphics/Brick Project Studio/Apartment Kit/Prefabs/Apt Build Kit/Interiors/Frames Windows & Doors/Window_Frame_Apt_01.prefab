@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 7532924934101685002}
   - component: {fileID: 9009722034315356788}
   - component: {fileID: 3999982659300000104}
-  - component: {fileID: 771466705}
-  - component: {fileID: 771466706}
   m_Layer: 0
   m_Name: Window_01
   m_TagString: Untagged
@@ -98,40 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17297667, y: 1.1844826, z: 1.9412029}
   m_Center: {x: -0.026247086, y: 0.5498121, z: -0.00000008940697}
---- !u!95 &771466705
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2503783858467847972}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cee913081722036408a297a363171970, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &771466706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2503783858467847972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea52830e8c3e35741a451b12277dfde1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclosewindow: {fileID: 771466705}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1 &2633268593446484574
 GameObject:
   m_ObjectHideFlags: 0

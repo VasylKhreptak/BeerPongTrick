@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 6689192478998342406}
   - component: {fileID: 6418604094188048440}
   - component: {fileID: 4929668019831370811}
-  - component: {fileID: 4929668019831370809}
-  - component: {fileID: 4929668019831370810}
   m_Layer: 0
   m_Name: Door.001
   m_TagString: Untagged
@@ -98,40 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08593076, y: 2.8386579, z: 1.4261861}
   m_Center: {x: -0.0429652, y: 0.05660838, z: 0.71147585}
---- !u!95 &4929668019831370809
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4929668019831370948}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 099e6cc38da8ff74bb68d0bf29e24642, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4929668019831370810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4929668019831370948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclose: {fileID: 4929668019831370809}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1 &9090885670013408196
 GameObject:
   m_ObjectHideFlags: 0

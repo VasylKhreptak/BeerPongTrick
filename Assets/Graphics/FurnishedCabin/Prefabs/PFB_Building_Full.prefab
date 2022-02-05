@@ -6314,8 +6314,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010310959806}
   - component: {fileID: 65000013570814236}
-  - component: {fileID: 95000010189434856}
-  - component: {fileID: 114000013492922598}
   m_Layer: 0
   m_Name: PFB_KitchenBench
   m_TagString: Untagged
@@ -6353,38 +6351,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.29, y: 1, z: 1.18}
   m_Center: {x: 0, y: 0.63, z: 0.97}
---- !u!95 &95000010189434856
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012057688272}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf8732cce940a439ca21e3ac1966f4db, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114000013492922598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012057688272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3174ace299f2b4c80baf44a6283329cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reachRange: 1.9
 --- !u!1 &1000012101761340
 GameObject:
   m_ObjectHideFlags: 0
@@ -9267,8 +9233,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013255263568}
-  - component: {fileID: 95000010126026382}
-  - component: {fileID: 114000010457442454}
   - component: {fileID: 65000011400627782}
   m_Layer: 0
   m_Name: PFB_TVStand
@@ -9294,38 +9258,6 @@ Transform:
   m_Father: {fileID: 451208}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!95 &95000010126026382
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013137690254}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6e134baca9b154265b12e6d080c74bb7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114000010457442454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013137690254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3174ace299f2b4c80baf44a6283329cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reachRange: 1.8
 --- !u!65 &65000011400627782
 BoxCollider:
   m_ObjectHideFlags: 0

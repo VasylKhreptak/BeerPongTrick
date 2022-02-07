@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4936635111863572}
   - component: {fileID: 65146355486194748}
+  - component: {fileID: 1020952926811831680}
   m_Layer: 0
   m_Name: CH0
   m_TagString: Untagged
@@ -47,6 +48,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.27, y: 1, z: 0.27}
   m_Center: {x: 0, y: -0.55, z: 0}
+--- !u!114 &1020952926811831680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340572868665738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6642b76017ce41b4aad3b76cc21fdbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: d7e2fe062f1d21e488a60962ed4fe2b6, type: 2}
+  _audioClips:
+  - {fileID: 8300000, guid: 7303a12036899a94ea68346d29fc3b1d, type: 3}
 --- !u!1 &1558423068011102
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,8 +269,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9716981, g: 0.7316516, b: 0.27959237, a: 1}
-  m_Intensity: 1.31
-  m_Range: 3.8166342
+  m_Intensity: 2
+  m_Range: 2.1066074
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -292,7 +308,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

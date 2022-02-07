@@ -43,8 +43,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9137255, g: 0.6448321, b: 0.19215682, a: 1}
-  m_Intensity: 1.37
-  m_Range: 10
+  m_Intensity: 2
+  m_Range: 3.3577747
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -82,7 +82,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4177046354630628}
   - component: {fileID: 65455356704917402}
+  - component: {fileID: 861274940583534117}
   m_Layer: 0
   m_Name: candle
   m_TagString: Untagged
@@ -138,8 +139,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.27, y: 1, z: 0.27}
-  m_Center: {x: 0, y: 0.43, z: 0}
+  m_Size: {x: 0.20521566, y: 0.8173074, z: 0.17686787}
+  m_Center: {x: -0.004778117, y: 0.3386537, z: -0.0010850877}
+--- !u!114 &861274940583534117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791116001804358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6642b76017ce41b4aad3b76cc21fdbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: d7e2fe062f1d21e488a60962ed4fe2b6, type: 2}
+  _audioClips:
+  - {fileID: 8300000, guid: 7303a12036899a94ea68346d29fc3b1d, type: 3}
 --- !u!1 &1942294695409674
 GameObject:
   m_ObjectHideFlags: 0

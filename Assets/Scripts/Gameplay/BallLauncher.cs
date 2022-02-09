@@ -88,7 +88,7 @@ public class BallLauncher : MonoBehaviour
 
     private Vector3 GetDirection(Vector2 firstPoint, Vector2 lastPoint)
     {
-        Vector3 direction = (_currentBall.transform.position - _cameraTransfrom.transform.position).normalized;
+        Vector3 direction = (_currentBall.transform.position - _cameraTransfrom.transform.position);
         
         direction = Quaternion.AngleAxis((lastPoint.x - firstPoint.x) * _horizontalSensetivity,
             _currentBall.transform.up) * direction;

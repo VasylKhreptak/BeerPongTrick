@@ -1,10 +1,13 @@
-using System;
+using MoreMountains.NiceVibrations;
 using UnityEngine;
 
 public class GotIntoCupVibration : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GotIntoCupEvent _gotIntoCupEvent;
+
+    [Header("Vibration Preferences")]
+    [SerializeField] private HapticTypes _hapticType = HapticTypes.LightImpact;
 
     #region MonoBehaviour
 
@@ -27,5 +30,6 @@ public class GotIntoCupVibration : MonoBehaviour
 
     private void Vibrate()
     {
+        MMVibrationManager.Haptic(_hapticType);
     }
 }

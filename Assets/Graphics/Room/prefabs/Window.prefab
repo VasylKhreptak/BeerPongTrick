@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33903800535493906}
   - component: {fileID: 23554027034568506}
   - component: {fileID: 5417721540340064637}
+  - component: {fileID: 8973867199108457101}
+  - component: {fileID: -784251614276788075}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -96,3 +98,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d1211c57c6e550e4fb88ec23f0e74b18, type: 3}
+--- !u!114 &8973867199108457101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302688083348132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fbcb522b554b547a123f97c733a1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: f3db6b982e0a18f42aa629cf8e20ab71, type: 2}
+--- !u!114 &-784251614276788075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302688083348132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6642b76017ce41b4aad3b76cc21fdbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onPhysicalHitEvent: {fileID: 8973867199108457101}
+  _data: {fileID: 11400000, guid: d7e2fe062f1d21e488a60962ed4fe2b6, type: 2}
+  _audioClips:
+  - {fileID: 8300000, guid: 4cd97bdc02cfd834b967c64bb0fcc786, type: 3}

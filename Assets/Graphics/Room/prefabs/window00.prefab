@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23923359421445132}
   - component: {fileID: 8918007478328807810}
   - component: {fileID: 6910385742577411115}
+  - component: {fileID: 6557161605933811567}
   m_Layer: 0
   m_Name: window00
   m_TagString: Untagged
@@ -109,6 +110,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6642b76017ce41b4aad3b76cc21fdbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onPhysicalHitEvent: {fileID: 6557161605933811567}
   _data: {fileID: 11400000, guid: d7e2fe062f1d21e488a60962ed4fe2b6, type: 2}
   _audioClips:
   - {fileID: 8300000, guid: 3cd55b7410af51449a2a6c13ce4b35e1, type: 3}
+--- !u!114 &6557161605933811567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285508875978724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fbcb522b554b547a123f97c733a1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: f3db6b982e0a18f42aa629cf8e20ab71, type: 2}

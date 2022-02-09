@@ -2163,7 +2163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lineRenderer: {fileID: 1162170009}
-  _pointsCount: 70
+  _pointsCount: 120
   _distanceBetweenPoints: 0.05
 --- !u!120 &1162170009
 LineRenderer:

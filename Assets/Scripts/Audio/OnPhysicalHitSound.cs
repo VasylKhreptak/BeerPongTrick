@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 using Zenject;
 
 public class OnPhysicalHitSound : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private OnPhysicalHitEvent _onPhysicalHitEvent;
+    
     [Header("Data")]
     [SerializeField] private OnPhysicalHitSoundData _data;
 
@@ -13,20 +17,27 @@ public class OnPhysicalHitSound : MonoBehaviour
 
     #region MonoBehaviour
 
+    private void OnValidate()
+    {
+        _onPhysicalHitEvent = GetComponent<OnPhysicalHitEvent>();
+    }
+
+    private void OnEnable()
+    {
+        _onPhysicalHitEvent.onHit += PlaySound;
+    }
+
+    private void OnDisable()
+    {
+        _onPhysicalHitEvent.onHit -= PlaySound;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (CanPlaySound(collision))
-        {
-            PlaySound(collision);
-        }
+        PlaySound(collision);
     }
 
     #endregion
-
-    private bool CanPlaySound(Collision collision)
-    {
-        return _data.LayerMask.ContainsLayer(collision.gameObject.layer);
-    }
 
     private void PlaySound(Collision collision)
     {

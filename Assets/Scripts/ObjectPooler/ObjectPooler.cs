@@ -18,23 +18,24 @@ public class ObjectPooler : MonoBehaviour
     [Header("Pool")]
     private Dictionary<Pools, Queue<GameObject>> _poolDictionary;
     [SerializeField] private List<Pool> _pools;
-
-    private ObjectPooler Instance;
-
+    
     [Inject] private DiContainer _diContainer;
 
     #region MonoBehaviour
 
     private void Awake()
     {
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
-
         CreatePoolFolders();
 
         FillPool();
     }
 
-    private void OnDestroy()
+    private void OnEnable()
+    {
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+
+    private void OnDisable()
     {
         SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }

@@ -1,13 +1,18 @@
-using UnityEngine;
 using Zenject;
 
 public class AudioPoolerInstaller : MonoInstaller
 {
-    [Header("References")]
-    [SerializeField] private GameObject _audioPoolerPrefab;
+    [UnityEngine.Header("References")]
+    [UnityEngine.SerializeField] private UnityEngine.GameObject _audioPoolerPrefab;
     
     public override void InstallBindings()
     {
-        Container.BindInstance(_audioPoolerPrefab.GetComponent<AudioPooler>()).AsSingle();
+        UnityEngine.GameObject instantiatedObject = Container.InstantiatePrefab(_audioPoolerPrefab);
+        instantiatedObject.transform.SetParent(null);
+        DontDestroyOnLoad(instantiatedObject);
+        
+        AudioPooler audioPooler = instantiatedObject.GetComponent<AudioPooler>();
+
+        Container.BindInstance(audioPooler).AsSingle();
     }
 }

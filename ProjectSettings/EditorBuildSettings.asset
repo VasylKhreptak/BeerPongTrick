@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom1.unity
     guid: b55500133e7823047b80105dd7cbc029
-  - enabled: 1
-    path: Assets/Scenes/Levels/Cabin/Cabin1.unity
-    guid: 90adcec604123394e894ebf27a12f228
   m_configObjects: {}

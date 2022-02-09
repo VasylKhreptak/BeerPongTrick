@@ -1,13 +1,18 @@
-using UnityEngine;
 using Zenject;
 
 public class ObjectPoolerInstaller : MonoInstaller
 {
-    [Header("References")]
-    [SerializeField] private GameObject _objectPoolerPrefab;
-
+    [UnityEngine.Header("References")]
+    [UnityEngine.SerializeField] private UnityEngine.GameObject _objectPoolerPrefab;
+    
     public override void InstallBindings()
     {
-        Container.BindInstance(_objectPoolerPrefab.GetComponent<ObjectPooler>()).AsSingle();
+        UnityEngine.GameObject instantiatedObject = Container.InstantiatePrefab(_objectPoolerPrefab);
+        instantiatedObject.transform.SetParent(null);
+        DontDestroyOnLoad(instantiatedObject);
+
+        ObjectPooler objectPooler = instantiatedObject.GetComponent<ObjectPooler>();
+        
+        Container.BindInstance(objectPooler).AsSingle();
     }
 }

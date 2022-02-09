@@ -4,7 +4,6 @@ using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using Zenject;
 
 public class AudioPooler : MonoBehaviour
 {
@@ -26,24 +25,21 @@ public class AudioPooler : MonoBehaviour
         public IEnumerator coroutine;
         public uint ID;
     }
-    
+
     [Header("References")]
     [SerializeField] private AudioMixer _audioMixer;
 
-    [Header("Pool preferences")]
+    [Header("Preferences")]
     [SerializeField] private int _maxSounds = 30;
     [SerializeField] private float _maxSoundDistance = 25f;
     [SerializeField] private float _minSoundDistance = 1f;
-    [SerializeField] private AudioRolloffMode rolloffMode = AudioRolloffMode.Linear;
+    [SerializeField] private AudioRolloffMode _rolloffMode = AudioRolloffMode.Linear;
 
     private Dictionary<string, TrackInfo> _tracks = new Dictionary<string, TrackInfo>();
     private List<AudioPoolItem> _pool = new List<AudioPoolItem>();
     private Dictionary<uint, AudioPoolItem> _activePool = new Dictionary<uint, AudioPoolItem>();
     private uint _idGiver;
-
     private Transform _listenerTransform;
-    
-    #region MonoBehaviour
 
     private void Awake()
     {
@@ -51,18 +47,6 @@ public class AudioPooler : MonoBehaviour
 
         FillPool();
     }
-    
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    #endregion
 
     private void FillTrackInfo()
     {
@@ -90,7 +74,7 @@ public class AudioPooler : MonoBehaviour
             poolItem.go = go;
             poolItem.audioSource = audioSource;
             poolItem.isPlaying = false;
-            poolItem.audioSource.rolloffMode = rolloffMode;
+            poolItem.audioSource.rolloffMode = _rolloffMode;
             poolItem.audioSource.maxDistance = _maxSoundDistance;
             poolItem.audioSource.minDistance = _minSoundDistance;
 
@@ -100,9 +84,19 @@ public class AudioPooler : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        _listenerTransform = Camera.main.gameObject.GetComponent<AudioListener>().transform;
+        _listenerTransform = Camera.main.GetComponent<AudioListener>().transform;
     }
 
     private IEnumerator SetTrackVolumeInternal(string track, float volume, float fadeTime)
@@ -124,15 +118,13 @@ public class AudioPooler : MonoBehaviour
     private uint ConfigurePoolObject(int poolIndex, string track, AudioClip clip, Vector3 position,
         float volume, float spatialBlend, float unimportance)
     {
-        if (poolIndex < 0 ||
-            poolIndex >= _pool.Count)
-            return 0;
+        if (poolIndex < 0 || poolIndex >= _pool.Count) return 0;
 
         var poolItem = _pool[poolIndex];
 
         _idGiver++;
 
-        var source = poolItem.audioSource;
+        AudioSource source = poolItem.audioSource;
         source.clip = clip;
         source.volume = volume;
         source.spatialBlend = spatialBlend;
@@ -160,7 +152,9 @@ public class AudioPooler : MonoBehaviour
         AudioPoolItem activeSound;
 
         if (_activePool.TryGetValue(id, out activeSound))
+        {
             KillAudioPoolItem(activeSound, id);
+        }
     }
 
     private void KillAudioPoolItem(AudioPoolItem activeSound, uint id)
@@ -174,9 +168,7 @@ public class AudioPooler : MonoBehaviour
 
     public void StopOneShootSound(uint id)
     {
-        AudioPoolItem activeSound;
-
-        if (_activePool.TryGetValue(id, out activeSound))
+        if (_activePool.TryGetValue(id, out AudioPoolItem activeSound))
         {
             StopCoroutine(activeSound.coroutine);
 
@@ -187,11 +179,11 @@ public class AudioPooler : MonoBehaviour
     public uint PlayOneShootSound(string track, AudioClip clip, Vector3 position, float volume,
         float spatialBlend, int priority = 128)
     {
-        if (CanPlayAudio(position) == false ||
-            _tracks.ContainsKey(track) == false ||
-            clip == null ||
-            volume.Equals(0f))
+        if (CanPlayAudio(position) == false || _tracks.ContainsKey(track) == false ||
+            clip == null || volume.Equals(0f))
+        {
             return 0;
+        }
 
         var unimportance = (_listenerTransform.position - position).sqrMagnitude /
                            Mathf.Max(1, priority);

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: a4b72c4098bf4a34696764f34e6d7394, type: 2}
-  _maxSounds: 30
+  _maxSounds: 15
   _maxSoundDistance: 25
   _minSoundDistance: 1
-  rolloffMode: 1
+  _rolloffMode: 1

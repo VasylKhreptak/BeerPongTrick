@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
-public class ObjectPooler : MonoBehaviour
+public sealed class ObjectPooler : MonoBehaviour
 {
     [Serializable]
     private class Pool

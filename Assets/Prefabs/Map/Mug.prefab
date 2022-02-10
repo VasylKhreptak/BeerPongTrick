@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6642b76017ce41b4aad3b76cc21fdbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onPhysicalHitEvent: {fileID: -1817110009758852107}
+  _onCollisionEnterEvent: {fileID: -1817110009758852107}
   _data: {fileID: 11400000, guid: d7e2fe062f1d21e488a60962ed4fe2b6, type: 2}
   _audioClips:
   - {fileID: 8300000, guid: 7303a12036899a94ea68346d29fc3b1d, type: 3}
@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 1799122493750207383}
   - component: {fileID: 4312877147994368676}
   - component: {fileID: 5384974379633477938}
+  - component: {fileID: 6973318856890405758}
   m_Layer: 0
   m_Name: BallGotIntoCup
   m_TagString: Untagged
@@ -203,9 +204,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.03
-  m_Height: 0.13915098
+  m_Height: 0.08256334
   m_Direction: 1
-  m_Center: {x: 0, y: 0.009575491, z: 0}
+  m_Center: {x: 0, y: -0.018718317, z: 0}
 --- !u!114 &5384974379633477938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,5 +219,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d38efb86ca91104cb7057ed1ee1b576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gotIntoCupEvent: {fileID: 946995569273655216}
+  _onTriggerEnterEvent: {fileID: 946995569273655216}
   _hapticType: 4
+--- !u!114 &6973318856890405758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715514425942464490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc2902d96294a642bd643da4739a7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 2626012451322854539}
+  _onTriggerEnterEvent: {fileID: 946995569273655216}
+  _audioClips:
+  - {fileID: 8300000, guid: 0eddb0bb45fb419468992f18d406a4c2, type: 3}
+  - {fileID: 8300000, guid: 38b70f44ded90104cba8848c038547dd, type: 3}
+  - {fileID: 8300000, guid: 8c6f3a8afccfe5943b43a63c4c599862, type: 3}
+  - {fileID: 8300000, guid: 66f3d62915a8ebe4cacc0ea8011f3598, type: 3}
+  - {fileID: 8300000, guid: 1151e7fb94e13c34e9f2b66ae45ad5b6, type: 3}
+  - {fileID: 8300000, guid: ab88c96a03358624ea56ea96c13c8c52, type: 3}

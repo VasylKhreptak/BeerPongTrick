@@ -6,12 +6,12 @@ public class TrajectoryRenderer : MonoBehaviour
     [SerializeField] private LineRenderer _lineRenderer;
 
     [Header("Preferences")]
-    [SerializeField] private int _pointsCount = 100;
+    [SerializeField] private int _maxPointsCount = 100;
     [SerializeField] private float _distanceBetweenPoints = 0.1f;
 
     public void Show(Vector3 origin, Vector3 direction, float speed)
     {
-        Vector3[] points = new Vector3[_pointsCount];
+        Vector3[] points = new Vector3[_maxPointsCount];
         _lineRenderer.positionCount = points.Length;
 
         for (int i = 0; i < points.Length; i++)

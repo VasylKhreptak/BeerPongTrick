@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class OnTriggerEnterEvent : MonoBehaviour
 {
-    [Header("Preferences")]
-    [SerializeField] private LayerMask _layerMask;
+    [Header("Data")]
+    [SerializeField] private OnTriggerEnterEventData _data;
 
     public Action<Collider> onEnter;
 
@@ -12,7 +12,7 @@ public class OnTriggerEnterEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_layerMask.ContainsLayer(other.gameObject.layer))
+        if (_data.LayerMask.ContainsLayer(other.gameObject.layer))
         {
             onEnter?.Invoke(other);
         }

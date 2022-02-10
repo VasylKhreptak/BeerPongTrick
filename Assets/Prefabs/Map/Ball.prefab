@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -8777705708287178280}
   - component: {fileID: -6887457526156770024}
   - component: {fileID: 3576946732099715265}
+  - component: {fileID: -3107192696247611963}
   m_Layer: 3
   m_Name: Ball
   m_TagString: Untagged
@@ -234,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6642b76017ce41b4aad3b76cc21fdbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onPhysicalHitEvent: {fileID: 3576946732099715265}
+  _onCollisionEnterEvent: {fileID: 3576946732099715265}
   _data: {fileID: 11400000, guid: d7e2fe062f1d21e488a60962ed4fe2b6, type: 2}
   _audioClips:
   - {fileID: 8300000, guid: 9b8ca1ac3e466ce4594c50825fe9d885, type: 3}
@@ -251,3 +252,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: f3db6b982e0a18f42aa629cf8e20ab71, type: 2}
+--- !u!114 &-3107192696247611963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777950554236210208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f30785af2985d44a05f71ef3054142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

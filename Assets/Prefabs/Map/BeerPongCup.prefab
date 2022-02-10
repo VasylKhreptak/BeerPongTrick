@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7611231520205605654}
   - component: {fileID: 3199778293840106481}
   - component: {fileID: -2746512362608587564}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BeerPongCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6642b76017ce41b4aad3b76cc21fdbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onPhysicalHitEvent: {fileID: -2746512362608587564}
+  _onCollisionEnterEvent: {fileID: -2746512362608587564}
   _data: {fileID: 11400000, guid: d7e2fe062f1d21e488a60962ed4fe2b6, type: 2}
   _audioClips:
   - {fileID: 8300000, guid: 9b8ca1ac3e466ce4594c50825fe9d885, type: 3}
@@ -158,7 +158,9 @@ GameObject:
   - component: {fileID: 9140223767552733557}
   - component: {fileID: 2974523596651289282}
   - component: {fileID: 2900583901886572116}
-  m_Layer: 0
+  - component: {fileID: 7464517868480927367}
+  - component: {fileID: 9050400761119521180}
+  m_Layer: 6
   m_Name: BallGotIntoCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,9 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a41ef0477f127a44b2aa2c2f6087e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  _data: {fileID: 11400000, guid: c2b6076d89b33f0418f2114848e88fed, type: 2}
 --- !u!114 &2974523596651289282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +220,42 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.008963965
-  m_Height: 0.036892753
+  m_Height: 0.04241818
   m_Direction: 1
-  m_Center: {x: -0.015675293, y: 0.013432641, z: 0.002376133}
+  m_Center: {x: -0.015675293, y: 0.016195355, z: 0.0023761324}
+--- !u!114 &7464517868480927367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160937563661056329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc2902d96294a642bd643da4739a7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 579311322376003697}
+  _onTriggerEnterEvent: {fileID: 9140223767552733557}
+  _audioClips:
+  - {fileID: 8300000, guid: 0eddb0bb45fb419468992f18d406a4c2, type: 3}
+  - {fileID: 8300000, guid: 38b70f44ded90104cba8848c038547dd, type: 3}
+  - {fileID: 8300000, guid: 8c6f3a8afccfe5943b43a63c4c599862, type: 3}
+  - {fileID: 8300000, guid: 66f3d62915a8ebe4cacc0ea8011f3598, type: 3}
+  - {fileID: 8300000, guid: 1151e7fb94e13c34e9f2b66ae45ad5b6, type: 3}
+  - {fileID: 8300000, guid: ab88c96a03358624ea56ea96c13c8c52, type: 3}
+--- !u!114 &9050400761119521180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160937563661056329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071823eced65c5a47bff19637dd98d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 579311322376003697}
+  _onTriggerEnterEvent: {fileID: 9140223767552733557}
+  _data: {fileID: 11400000, guid: 217ee23ef303edd4293bd9176b795803, type: 2}

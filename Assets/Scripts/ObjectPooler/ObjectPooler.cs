@@ -73,7 +73,7 @@ public class ObjectPooler : MonoBehaviour
         }
     }
 
-    public GameObject GetFromPool(Pools pool, Vector3 Position, Quaternion Rotation)
+    public GameObject GetFromPool(Pools pool, Vector3 position, Quaternion rotation)
     {
         if (_poolDictionary.ContainsKey(pool) == false)
         {
@@ -83,8 +83,8 @@ public class ObjectPooler : MonoBehaviour
 
         var objectFromPool = _poolDictionary[pool].Dequeue();
 
-        objectFromPool.transform.position = Position;
-        objectFromPool.transform.rotation = Rotation;
+        objectFromPool.transform.position = position;
+        objectFromPool.transform.rotation = rotation;
 
         if (objectFromPool.activeSelf)
         {

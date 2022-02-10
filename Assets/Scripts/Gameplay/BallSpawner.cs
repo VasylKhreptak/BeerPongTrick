@@ -12,10 +12,11 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private float _startSpawnDelay = 2f;
 
     [Inject] private ObjectPooler _objectPooler;
-
+    [Inject] private BallLauncher _ballLauncher;
+    
     private Tween _waitTween;
 
-    public static Action<GameObject> onBallSpawned;
+    public  Action<GameObject> onBallSpawned;
 
     private Transform _cameraTransform;
     
@@ -30,12 +31,12 @@ public class BallSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        BallLauncher.onBallLaunched += RespawnBall;
+        _ballLauncher.onBallLaunched += RespawnBall;
     }
 
     private void OnDisable()
     {
-        BallLauncher.onBallLaunched -= RespawnBall;
+        _ballLauncher.onBallLaunched -= RespawnBall;
     }
 
     private void OnDestroy()

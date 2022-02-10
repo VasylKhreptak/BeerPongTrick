@@ -19,7 +19,8 @@ public class BallLauncher : MonoBehaviour
     [Inject] private InputManager _inputManager;
     [Inject] private BallSpawner _ballSpawner;
 
-    public bool canShoot = false;
+    [Header("State Preferences")]
+    public bool canShoot = true;
 
     private GameObject _currentBall;
 

@@ -3190,6 +3190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717077462}
   - component: {fileID: 1717077463}
+  - component: {fileID: 1717077464}
   m_Layer: 0
   m_Name: BallLauncher
   m_TagString: Untagged
@@ -3229,7 +3230,27 @@ MonoBehaviour:
   _maxVelocity: 10
   _horizontalSensetivity: 0.05
   _verticalSensetivity: 0.05
-  canShoot: 0
+  canShoot: 1
+--- !u!114 &1717077464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717077461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21650fc05db06ca43b8d23ab33a19f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ballLauncher: {fileID: 1717077463}
+  _audioClips:
+  - {fileID: 8300000, guid: a24d998cb1ffac046a95bae96c45ebd2, type: 3}
+  - {fileID: 8300000, guid: efbab69ac27ad7b469b9bb43d33b45b4, type: 3}
+  - {fileID: 8300000, guid: 480001f4562f21f4195c031a84777364, type: 3}
+  - {fileID: 8300000, guid: d0d1cfbde7726a844a5dbb9eb218d90a, type: 3}
+  - {fileID: 8300000, guid: 4b9f303878f921b47adc7b42fe2a409c, type: 3}
+  - {fileID: 8300000, guid: 1bfc1c649549df14fbcee4365b64c5dc, type: 3}
 --- !u!4 &1736466429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4227452807683920, guid: a5ab52c5408d7e0499ce5e019116f6e3, type: 3}

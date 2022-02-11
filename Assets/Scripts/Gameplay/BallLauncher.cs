@@ -101,7 +101,7 @@ public class BallLauncher : MonoBehaviour
 
     private float GetVelocity(Vector2 firstPoint, Vector2 lastPoint)
     {
-        return Mathf.Clamp(_velocityAmplifier * Vector2.Distance(firstPoint, lastPoint),
+        return Mathf.Clamp(_velocityAmplifier * Mathf.Abs(firstPoint.y - lastPoint.y),
             _minVelocity, _maxVelocity);
     }
 

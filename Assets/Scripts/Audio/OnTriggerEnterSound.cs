@@ -35,7 +35,7 @@ public class OnTriggerEnterSound : MonoBehaviour
 
     private void PlaySound(Collider collider)
     {
-        _audioPooler.PlayOneShootSound(AudioMixerGroups.VFX,
+        _audioPooler.PlayOneShootSound(AudioMixerGroups.SOUND,
             _audioClips.Random(), collider.ClosestPointOnBounds(_transform.position), 1f, 1f);
     }
 }

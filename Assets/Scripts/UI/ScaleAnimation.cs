@@ -18,7 +18,7 @@ namespace UI
         private Tween _scaleTween;
 
         private Action _onComplete;
-        
+
         #region MonoBahaviour
 
         private void OnValidate()
@@ -33,7 +33,7 @@ namespace UI
 
         #endregion
 
-        public override  void Animate(bool state)
+        public override void Animate(bool state)
         {
             _transform.localScale = state ? _startScale : _targetSfcale;
 

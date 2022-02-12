@@ -9,6 +9,9 @@ public class OnTriggerEnterVibration : MonoBehaviour
     [Header("Vibration Preferences")]
     [SerializeField] private HapticTypes _hapticType = HapticTypes.LightImpact;
 
+    [Header("Player Prefs Preferences")]
+    [SerializeField] private string _key = "Vibration";
+
     #region MonoBehaviour
 
     private void OnValidate()
@@ -18,18 +21,26 @@ public class OnTriggerEnterVibration : MonoBehaviour
 
     private void OnEnable()
     {
-        _onTriggerEnterEvent.onEnter += Vibrate;
+        _onTriggerEnterEvent.onEnter += TryVibrate;
     }
 
     private void OnDisable()
     {
-        _onTriggerEnterEvent.onEnter -= Vibrate;
+        _onTriggerEnterEvent.onEnter -= TryVibrate;
     }
 
     #endregion
 
-    private void Vibrate(Collider collider)
+    private void TryVibrate(Collider collider)
     {
-        MMVibrationManager.Haptic(_hapticType);
+        if (CanVibrate())
+        {
+            MMVibrationManager.Haptic(_hapticType);
+        }
+    }
+
+    private bool CanVibrate()
+    {
+        return PlayerPrefsSafe.GetBool(_key, true);
     }
 }

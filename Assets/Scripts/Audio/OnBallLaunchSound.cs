@@ -42,7 +42,7 @@ public class OnBallLaunchSound : MonoBehaviour
     
     private void PlaySound()
     {
-        _audioPooler.PlayOneShootSound(AudioMixerGroups.VFX, _audioClips.Random(),
+        _audioPooler.PlayOneShootSound(AudioMixerGroups.SOUND, _audioClips.Random(),
             _currentBall.transform.position, 1f, 1f);
     }
 }

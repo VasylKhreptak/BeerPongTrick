@@ -41,7 +41,7 @@ public class OnCollisionSound : MonoBehaviour
 
     private void PlaySound(Collision collision)
     {
-        _audioPooler.PlayOneShootSound(AudioMixerGroups.VFX,
+        _audioPooler.PlayOneShootSound(AudioMixerGroups.SOUND,
             _audioClips.Random(), collision.GetContact(0).point, GetVolume(collision), 1f);
     }
 

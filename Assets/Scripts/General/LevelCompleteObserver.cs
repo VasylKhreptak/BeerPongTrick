@@ -32,8 +32,6 @@ public class LevelCompleteObserver : MonoBehaviour
         if (IsLevelCompleted())
         {
             onLevelComplete?.Invoke();
-
-            Debug.Log("Level Completed");
         }
     }
 

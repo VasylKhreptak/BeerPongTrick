@@ -1,12 +1,21 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Zenject;
 
 namespace UI
 {
     public class PlayButton : MonoBehaviour
     {
-        public void LoadGame()
+        [Inject] private LevelProvider _levelProvider;
+        
+        public void LoadLevel()
         {
-            Debug.Log("Play");
+            string nextLevel = _levelProvider.GetNextUnfinishedLevel();
+            
+            if (nextLevel != null)
+            {
+                SceneManager.LoadScene(nextLevel);
+            }
         }
     }
 }

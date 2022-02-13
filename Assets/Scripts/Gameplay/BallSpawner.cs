@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using Zenject;
 
@@ -13,6 +14,9 @@ public class BallSpawner : MonoBehaviour
 
     [Inject] private ObjectPooler _objectPooler;
     [Inject] private BallLauncher _ballLauncher;
+    [Inject] private LevelCompleteObserver _levelCompleteObserver;
+
+    private bool _canSpawn = true;
     
     private Tween _waitTween;
 
@@ -25,18 +29,23 @@ public class BallSpawner : MonoBehaviour
     private void Awake()
     {
         _cameraTransform = Camera.main.transform;
-        
-        SpawnBall(_startSpawnDelay);
+
+        if (_canSpawn)
+        {
+            SpawnBall(_startSpawnDelay);
+        }
     }
 
     private void OnEnable()
     {
         _ballLauncher.onBallLaunched += RespawnBall;
+        _levelCompleteObserver.onLevelComplete += OnLevelComplete;
     }
 
     private void OnDisable()
     {
         _ballLauncher.onBallLaunched -= RespawnBall;
+        _levelCompleteObserver.onLevelComplete -= OnLevelComplete;
     }
 
     private void OnDestroy()
@@ -68,8 +77,24 @@ public class BallSpawner : MonoBehaviour
     private void SpawnBall(float delay)
     {
         _waitTween.Kill();
-        this.DOWait(delay).OnComplete(SpawnBall);
+        this.DOWait(delay).OnComplete(() =>
+        {
+            if (CanSpawnBall())
+            {
+                SpawnBall();
+            }
+        });
     }
 
-    private void RespawnBall() => SpawnBall(_spawnDelay);
+    private void RespawnBall()
+    {
+        SpawnBall(_spawnDelay);
+    }
+
+    private bool CanSpawnBall() => _canSpawn;
+
+    private void OnLevelComplete()
+    {
+        _canSpawn = false;
+    }
 }

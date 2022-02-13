@@ -26,4 +26,9 @@ public static class GameDataProvider
     {
         return PlayerPrefsSafe.HasKey(key) == false ? @default : Load<T>(key);
     }
+
+    public static bool HasKey(string key)
+    {
+        return PlayerPrefsSafe.HasKey(key);
+    }
 }

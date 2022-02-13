@@ -14,9 +14,7 @@ public class LevelProvider : MonoBehaviour
         {
             if (level.finished == false)
             {
-                Debug.Log(level.levelAsset);
-
-                return level.levelAsset.name;
+                return level.levelName;
             }
         }
 
@@ -31,7 +29,7 @@ public class LevelProvider : MonoBehaviour
         {
             var levelItem = _levelsData.levelContainer.levelItems[i];
 
-            if (levelItem.levelAsset.name == activeSceneName)
+            if (levelItem.levelName == activeSceneName)
             {
                 return i + 1;
             }
@@ -53,8 +51,6 @@ public class LevelProvider : MonoBehaviour
             {
                 return false;
             }
-
-            Debug.Log("Finished: " + (levelItem.finished));
         }
 
         return true;
@@ -71,7 +67,7 @@ public class LevelProvider : MonoBehaviour
 
         foreach (var levelItem in _levelsData.levelContainer.levelItems)
         {
-            if (levelItem.levelAsset.name == activeSceneName)
+            if (levelItem.levelName == activeSceneName)
             {
                 return levelItem;
             }

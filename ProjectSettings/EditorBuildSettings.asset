@@ -11,4 +11,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom1.unity
     guid: b55500133e7823047b80105dd7cbc029
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom2.unity
+    guid: c4233b21c70e9c9469205ab03b577d83
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom3.unity
+    guid: fba3a1876a34f674ba4a6f8ae5e80593
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom4.unity
+    guid: 50d919ccf585cab4896eda2bed77f43b
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom5.unity
+    guid: 002ea461beae719428c63eb91140cb6e
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom6.unity
+    guid: aa8025aa7663d044eadb885f73c9ec87
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom7.unity
+    guid: 81c40b6df931c9b409c0ad717fae780d
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom8.unity
+    guid: 5428ff648196aa444b9c9c536b2ce47f
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom9.unity
+    guid: 22a0025e45d837348977a38c66f4957a
+  - enabled: 1
+    path: Assets/Scenes/Levels/MedievalRoom/MedievalRoom10.unity
+    guid: e2a378fbc254c10428cdb0b12078f9dc
   m_configObjects: {}

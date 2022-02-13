@@ -45,6 +45,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelContainer:
     levelItems:
-    - levelAsset: {fileID: 102900000, guid: b55500133e7823047b80105dd7cbc029, type: 3}
+    - levelName: MedievalRoom1
+      finished: 0
+    - levelName: MedievalRoom2
+      finished: 0
+    - levelName: MedievalRoom3
+      finished: 0
+    - levelName: MedievalRoom4
+      finished: 0
+    - levelName: MedievalRoom5
+      finished: 0
+    - levelName: MedievalRoom6
+      finished: 0
+    - levelName: MedievalRoom7
+      finished: 0
+    - levelName: MedievalRoom8
+      finished: 0
+    - levelName: MedievalRoom9
+      finished: 0
+    - levelName: MedievalRoom10
       finished: 0
   _key: Levels

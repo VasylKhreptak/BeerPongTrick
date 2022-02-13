@@ -57,7 +57,7 @@ public class LevelsData : MonoBehaviour
     [Serializable]
     public class LevelItem
     { 
-        public SceneAsset levelAsset;
+        [Scene] public string levelName;
         public bool finished;
     }
 }

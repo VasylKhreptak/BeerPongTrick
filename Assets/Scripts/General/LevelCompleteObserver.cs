@@ -1,7 +1,11 @@
 using System;
+
+#if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.SceneManagement;
+#endif
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelCompleteObserver : MonoBehaviour
 {
@@ -12,7 +16,7 @@ public class LevelCompleteObserver : MonoBehaviour
     [SerializeField] private LevelCompleteCondition[] _conditions;
 
     public Action onLevelComplete;
-    
+
     #region MonoBehaviour
 
     private void OnEnable()
@@ -64,6 +68,12 @@ public class LevelCompleteObserver : MonoBehaviour
             if (GUILayout.Button("Find Conditions"))
             {
                 targetScript._conditions = FindObjectsOfType<LevelCompleteCondition>();
+            }
+
+            if (GUI.changed)
+            {
+                EditorUtility.SetDirty(targetScript);
+                EditorSceneManager.MarkSceneDirty(targetScript.gameObject.scene);
             }
         }
     }

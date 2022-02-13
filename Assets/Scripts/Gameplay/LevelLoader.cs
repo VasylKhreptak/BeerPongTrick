@@ -36,8 +36,8 @@ public class LevelLoader : MonoBehaviour
         {
             if (_levelProvider.IsLastLevel())
             {
-                SceneManager.LoadScene("MainMenu");
                 _levelProvider.MarkCurrentLevelAsCompleted();
+                SceneManager.LoadScene("MainMenu");
                 return;
             }
             

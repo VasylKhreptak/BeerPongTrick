@@ -51,14 +51,20 @@ SpriteAtlas:
     - {fileID: 2800000, guid: fe65632cb019e454b9ad05b68f4bbb3c, type: 3}
     - {fileID: 2800000, guid: 6b0b18335bd64c84eb356ba433732607, type: 3}
     - {fileID: 2800000, guid: 83528744b8b35244d8cafeb41d6118bd, type: 3}
-    totalSpriteSurfaceArea: 131072
+    - {fileID: 2800000, guid: c68056499f7e6014a80cdebcba53d8c9, type: 3}
+    - {fileID: 2800000, guid: a86ce9b83b8c5bf44a0d1a6a4fade805, type: 3}
+    - {fileID: 2800000, guid: 42b78830aeae96f4e984fe3c9b21f2ce, type: 3}
+    totalSpriteSurfaceArea: 180224
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 42b78830aeae96f4e984fe3c9b21f2ce, type: 3}
   - {fileID: 21300000, guid: 6b0b18335bd64c84eb356ba433732607, type: 3}
   - {fileID: 21300000, guid: 83528744b8b35244d8cafeb41d6118bd, type: 3}
+  - {fileID: 21300000, guid: a86ce9b83b8c5bf44a0d1a6a4fade805, type: 3}
+  - {fileID: 21300000, guid: c68056499f7e6014a80cdebcba53d8c9, type: 3}
   - {fileID: 21300000, guid: 872cd13aab502e84db08786ff4e9c7b2, type: 3}
   - {fileID: 21300000, guid: 1d55901c11f8ebd4f8a62026aab82bab, type: 3}
   - {fileID: 21300000, guid: fe65632cb019e454b9ad05b68f4bbb3c, type: 3}
@@ -66,8 +72,11 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f65d5bcf3afdf224cafdbb710aaeebf2, type: 3}
   - {fileID: 21300000, guid: bc56c2ff4fcca1e4985d64e6cf0a49cc, type: 3}
   m_PackedSpriteNamesToIndex:
+  - russia
   - vibrate
   - SettingsBackground
+  - united-kingdom
+  - ukraine
   - Music-on
   - no-vibrate
   - sound
